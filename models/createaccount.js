@@ -21,6 +21,5 @@ const AccountSchema = new Schema({
     ],
 });
 
-
 const createaccount = mongoose.model('Account', AccountSchema);
 module.exports = createaccount;
