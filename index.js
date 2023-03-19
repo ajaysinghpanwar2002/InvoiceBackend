@@ -1,7 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const connectToMongo = require('./Database')
 var cors = require('cors')
-require('dotenv').config()
 const app = express()
 connectToMongo();
 const port = process.env.PORT || 5000
@@ -20,4 +20,4 @@ app.use('/api/invoicelist', inVoiceRouter)
 
 app.listen(port, () => {
     console.log(`Server listening on port http://localhost:${port}`);
-}) 
+})

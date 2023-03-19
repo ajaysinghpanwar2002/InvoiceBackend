@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Invoice = require('../models/invoicelist');
+const Invoicelist = require('../models/invoicelist');
 
 router.get('/', async (req, res) => {
     try {
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
             ]
         };
 
-        const invoices = await Invoice.find(query)
+        const invoices = await Invoicelist.find(query)
             .skip(skip)
             .limit(limit);
 
